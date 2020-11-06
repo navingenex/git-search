@@ -1,0 +1,15 @@
+<div class="usersContainer">
+  <div class="userCount">
+    <h3>{{searchData['total_count']}} users</h3>
+  </div>
+  <div *ngFor="let user of searchData['items']" class="user">
+    <div class="userDetail">
+      <img [src]="user?.avatar_url" [attr.alt]="user?.login">
+      <a [attr.href]="user?.html_url" target="_blank" class="login">{{user.login}}</a>
+    </div>
+    <div>
+      <a [attr.href]="user?.followers_url" target="_blank">View Followers</a>
+    </div>
+  </div>
+  <app-pagination [offset]="offset" [limit]="limit" [size]="count" (pageChange)="onPageChange($event)"></app-pagination>
+</div>

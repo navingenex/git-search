@@ -1,0 +1,21 @@
+.usersContainer {
+  width: 80%;
+  margin: auto;
+  .user {
+    padding: 20px 5px;
+    border-top: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    .userDetail {
+      display: flex;
+      align-items: center;
+      img {
+        width: 30px;
+      }
+      .login {
+        font-size: 16px;
+        margin-left: 20px;
+      }
+    }
+  }
+}
